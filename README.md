@@ -197,7 +197,7 @@ Suggestions, improvements, and bug reports are welcome.
 **Janani Gowthaman**
 
 - GitHub: [@jananigowthaman](https://github.com/jananigowthaman)
-- Repository: [ReachMail on GitHub](https://github.com/jananigowthaman/reachmail)
+- Repository: [ReachMail](https://github.com/jananigowthaman/reachmail)
 
 ## License
 
