@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://laravel.com/docs"><img src="https://img.shields.io/badge/Laravel-Framework-FF2D20?logo=laravel&logoColor=white" alt="Laravel"></a>
+  <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-Framework-FF2D20?logo=laravel&logoColor=white" alt="Laravel"></a>
   <a href="https://www.php.net/"><img src="https://img.shields.io/badge/PHP-Backend-777BB4?logo=php&logoColor=white" alt="PHP"></a>
   <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql&logoColor=white" alt="MySQL"></a>
   <a href="https://github.com/jananigowthaman/reachmail"><img src="https://img.shields.io/badge/Project-ReachMail-0E8A65" alt="ReachMail"></a>
@@ -17,40 +17,38 @@
 
 ## About ReachMail
 
-ReachMail is a web application built with Laravel and PHP to help organize professional email outreach, manage contacts, and maintain campaign records in one place.
+ReachMail is a web application built with Laravel and PHP to organize professional email outreach, manage contacts, and maintain campaign records in one place.
 
-The project is designed to support workflows such as recruiter outreach, job applications, professional networking, and business communication. It aims to reduce repetitive work by bringing contact organization, email preparation, campaign management, and outreach history together in a single workspace.
+The application is designed to support workflows such as job applications, recruiter outreach, professional networking, and business communication. It brings contact organization, email campaign management, and outreach history together in a single workspace.
 
 ## Key Features
 
 ### Contact Management
-- Organize professional contacts for targeted outreach.
-- Import contact information from supported file formats, where implemented.
+- Organize contacts for targeted outreach.
+- Import contact information from supported file formats.
 - Maintain contact details for campaign preparation.
 
 ### Email Campaign Management
 - Create and organize email campaigns.
-- Prepare messages for specific audiences.
-- Review campaign details and maintain campaign history.
-- Manage campaign status and sending workflows.
+- Prepare email messages for specific audiences.
+- Manage campaign records and sending workflows.
+- Review previous campaign activity.
 
 ### Email Personalization
 - Prepare reusable email content for different outreach purposes.
 - Personalize messages using contact information, where supported.
 - Review email content before sending.
 
-### Outreach History
-- Keep campaign records organized.
-- Review previous outreach activity.
-- Track sending status and campaign results according to the configured email integration.
+### Outreach Tracking
+- Maintain campaign history and sending records.
+- Review campaign status and results according to the configured email integration.
 
-### Development Focus
+### Application Interface
 - Responsive web interface.
-- Structured backend application using Laravel.
+- Laravel-based backend architecture.
 - Database-backed contact and campaign management.
-- Integration with email infrastructure as configured.
 
-> **Note:** Feature availability depends on the current implementation and configuration. Email delivery, open tracking, reply tracking, scheduling, and other provider-dependent features require the relevant integrations.
+> **Note:** Feature availability depends on the current implementation and configuration. Email delivery, scheduling, open tracking, reply tracking, and other provider-dependent features require the relevant integrations.
 
 ## Technology Stack
 
@@ -65,63 +63,60 @@ The project is designed to support workflows such as recruiter outreach, job app
 | [Bootstrap](https://getbootstrap.com/) | Responsive UI components, if used |
 | [Git](https://git-scm.com/) | Version control |
 
-## Getting Started
+## Requirements
 
-Follow these instructions to set up ReachMail in a local development environment.
-
-### Prerequisites
-
-Install the following tools before proceeding:
+Make sure the following tools are installed:
 
 - [PHP](https://www.php.net/downloads.php) compatible with the project
 - [Composer](https://getcomposer.org/download/)
 - [MySQL](https://dev.mysql.com/downloads/)
 - [Git](https://git-scm.com/downloads)
-- [Node.js and npm](https://nodejs.org/), if required by the frontend build
 
-### Installation
+## Installation and Setup
 
-**1. Clone the repository**
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/jananigowthaman/reachmail.git
 ```
 
-**2. Navigate to the project directory**
+### 2. Navigate to the Project Directory
 
 ```bash
 cd reachmail
 ```
 
-**3. Install PHP dependencies**
+### 3. Install PHP Dependencies
 
 ```bash
 composer install
 ```
 
-**4. Configure environment variables**
+### 4. Configure Environment Variables
 
-Create a local environment file:
+Create a local environment file by copying `.env.example`.
 
-```bash
-cp .env.example .env
-```
-
-On Windows Command Prompt, use:
+**Windows Command Prompt:**
 
 ```cmd
 copy .env.example .env
 ```
 
-**5. Generate the application key**
+**Linux or macOS:**
+
+```bash
+cp .env.example .env
+```
+
+### 5. Generate the Application Key
 
 ```bash
 php artisan key:generate
 ```
 
-**6. Configure the database**
+### 6. Configure the Database
 
-Create a MySQL database and update the following values in your `.env` file:
+Create a MySQL database and update the database configuration in your `.env` file.
 
 ```dotenv
 DB_CONNECTION=mysql
@@ -132,48 +127,39 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Replace the database name, username, and password with your local configuration.
+Replace the database name, username, and password with your local MySQL configuration.
 
-**7. Run database migrations**
+### 7. Run Database Migrations
 
 ```bash
 php artisan migrate
 ```
 
-If the application requires seed data, run the appropriate seeders after reviewing the project configuration.
+If the application requires seed data, run the relevant database seeders according to the project configuration.
 
-**8. Install frontend dependencies, if required**
-
-```bash
-npm install
-npm run build
-```
-
-**9. Start the development server**
+### 8. Start the Application
 
 ```bash
 php artisan serve
 ```
 
-Open the local URL displayed in the terminal. By default, Laravel uses:
+Open the following URL in your browser:
 
 [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-### Configuration
+## Configuration
 
-Configure the email provider, API credentials, queues, scheduled tasks, or other integrations if they are required by your implementation.
+Configure the email provider and any required credentials through your environment settings if the application uses an external email service.
 
-Keep credentials in environment variables and never commit private configuration files.
+Keep credentials and API keys out of the source code. Never commit your `.env` file or other sensitive configuration files to a public repository.
 
 ## Security and Responsible Use
 
-- Never commit `.env` files, API keys, passwords, or email provider credentials.
+- Never publish passwords, API keys, email credentials, or private contact information.
 - Use authorized email accounts and appropriate recipient consent.
 - Test email workflows with test recipients before sending real campaigns.
 - Follow applicable privacy, email marketing, and anti-spam requirements.
-- Treat email open tracking as an estimate because privacy features and image blocking can affect tracking accuracy.
-
-If you discover a security vulnerability in a public deployment, follow the repository owner's published security reporting instructions.
+- Understand that email open tracking may be affected by email client privacy protections and image blocking.
 
 ## Project Structure
 
@@ -192,33 +178,30 @@ reachmail/
 ├── tests/           # Automated tests
 ├── .env.example     # Example environment configuration
 ├── artisan          # Laravel command-line interface
-├── composer.json    # PHP dependencies
-└── package.json     # Frontend dependencies, if applicable
+└── composer.json    # PHP dependencies
 ```
 
-The exact structure may vary depending on the current implementation.
+The exact structure may vary depending on the project implementation.
 
 ## Contributing
 
-Contributions, suggestions, and bug reports are welcome.
+Suggestions, improvements, and bug reports are welcome.
 
 1. Fork the repository.
-2. Create a feature branch.
+2. Create a branch for your changes.
 3. Implement and test your changes.
-4. Submit a pull request describing the changes.
+4. Submit a pull request with a clear description.
 
 ## Author
 
 **Janani Gowthaman**
 
 - GitHub: [@jananigowthaman](https://github.com/jananigowthaman)
-- Project Repository: [ReachMail](https://github.com/jananigowthaman/reachmail)
+- Repository: [ReachMail on GitHub](https://github.com/jananigowthaman/reachmail)
 
 ## License
 
-ReachMail's license has not yet been specified. The Laravel framework's MIT license does not automatically determine the license of this application.
-
-Add a `LICENSE` file and update this section when you decide how the project source code may be used, modified, and distributed.
+ReachMail's license has not yet been specified. Add a `LICENSE` file and update this section once you have decided the terms under which others may use, modify, and distribute the project.
 
 ---
 
