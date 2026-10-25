@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="32" height="32">
+  <defs>
+    <linearGradient id="rmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6d4c41"/>
+      <stop offset="100%" stop-color="#4e342e"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle matching ReachMail brand theme -->
+  <circle cx="8" cy="8" r="8" fill="url(#rmGrad)"/>
+  
+  <!-- Exactly scaled, centered Bootstrap bi-send-fill paper airplane -->
+  <g transform="translate(3.1, 3.1) scale(0.6125)">
+    <path fill="#ffffff" d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 1.59 4.908.008.01a.5.5 0 0 0 .902.055l3.009-3.546 4.606 3.072.012.008a.5.5 0 0 0 .707-.298L15.964.686ZM6.397 8.241l-2.073-1.32L12.43 2.802 6.397 8.241Zm.525 1.056 4.708-4.225-3.41 4.767-.184 1.761-.926-2.193L6.922 9.297Zm2.102.827L13.8 6.446l-2.82 4.135-.615-.457H10.364l-.34-.251Z"/>
+  </g>
+</svg>
